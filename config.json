@@ -1,0 +1,11 @@
+{
+  "language": "auto",
+  "time_limit_seconds": 2,
+  "memory_limit_mb": 64,
+  "io_mode": "file",
+  "source_dir": "test_submissions_stdin",
+  "testcase_dir": "testcases",
+  "exec_dir": "executables",
+  "result_log": "eval_log.txt",
+  "csv_file": "eval_results.csv"
+}
