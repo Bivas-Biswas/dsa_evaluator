@@ -3,7 +3,7 @@
 
 ```Flexible I/O Modes:``` Supports stdin/stdout or file-based I/O.
 
-```json
+```js
 {
   "language": "auto",               // "auto" | "c" | "cpp" | "python" (auto-detects or forces language)
   "time_limit_seconds": 2,          // Max execution time per test case (seconds)
