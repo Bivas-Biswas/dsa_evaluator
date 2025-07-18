@@ -10,7 +10,7 @@ class Config:
     def _load_config(self):
         if not os.path.exists(self.config_path):
             raise FileNotFoundError(f"Configuration file not found at: {self.config_path}")
-
+        
         with open(self.config_path, 'r') as f:
             config_data = json.load(f)
 

@@ -13,8 +13,8 @@ def main():
     # Ensure necessary directories exist
     os.makedirs('executables', exist_ok=True)
     os.makedirs('results', exist_ok=True)
-    os.makedirs('submissions/stdin', exist_ok=True)
-    os.makedirs('submissions/file', exist_ok=True)
+    # os.makedirs('submissions/stdin', exist_ok=True)
+    # os.makedirs('submissions/file', exist_ok=True)
     os.makedirs('testcases', exist_ok=True)
 
     config = None # Initialize config to None

@@ -1,0 +1,17 @@
+Program,TestCase Input,Result,Time (s),Memory (KB),Error/Details
+add,input1.txt,Correct,0.0328,10308,
+add,input2.txt,Correct,0.0238,10308,
+add,input1.txt,Wrong Answer,0.0038,20024,"Expected:
+7
+Actual:
+-1
+STDERR:
+"
+add,input2.txt,Wrong Answer,0.0040,20024,"Expected:
+25
+Actual:
+-5
+STDERR:
+"
+add,input1.txt,Correct,0.0045,59928,
+add,input2.txt,Correct,0.0093,59928,

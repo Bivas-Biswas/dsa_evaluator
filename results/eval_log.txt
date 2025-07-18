@@ -1,0 +1,45 @@
+DSA Test Code Evaluator Log - 2025-07-18 13:26:21.875920
+--------------------------------------------------
+
+[2025-07-18 13:26:21] Program: add, Test Case: input1.txt
+  Result: Correct
+  Time: 0.0328 s
+  Memory: 10308 KB
+
+[2025-07-18 13:26:21] Program: add, Test Case: input2.txt
+  Result: Correct
+  Time: 0.0238 s
+  Memory: 10308 KB
+
+[2025-07-18 13:26:22] Program: add, Test Case: input1.txt
+  Result: Wrong Answer
+  Time: 0.0038 s
+  Memory: 20024 KB
+  Details: Expected:
+7
+Actual:
+-1
+STDERR:
+
+
+[2025-07-18 13:26:22] Program: add, Test Case: input2.txt
+  Result: Wrong Answer
+  Time: 0.0040 s
+  Memory: 20024 KB
+  Details: Expected:
+25
+Actual:
+-5
+STDERR:
+
+
+[2025-07-18 13:26:22] Program: add, Test Case: input1.txt
+  Result: Correct
+  Time: 0.0045 s
+  Memory: 59928 KB
+
+[2025-07-18 13:26:22] Program: add, Test Case: input2.txt
+  Result: Correct
+  Time: 0.0093 s
+  Memory: 59928 KB
+
