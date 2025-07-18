@@ -15,4 +15,4 @@
   "source_dir": "submissions",      // Path to user code (e.g., "submissions/file" for file I/O)
   "csv_file": "eval_results.csv"    // Structured CSV summary (cleared each run)
 }
-```# dsa_evaluator
+```
