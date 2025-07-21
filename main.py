@@ -8,6 +8,7 @@ from evaluator.compiler import Compiler
 from evaluator.testcase import TestCaseFinder
 from evaluator.runner import Runner
 from evaluator.logger import Logger
+from evaluator.static_analysis import StaticAnalysis
 
 def main():
     # Ensure necessary directories exist
@@ -31,6 +32,7 @@ def main():
     testcase_finder = TestCaseFinder(config.testcase_dir)
     runner = Runner(config)
     logger = Logger(config.result_log, config.csv_file)
+    analysier = StaticAnalysis()
 
     source_files = [f for f in os.listdir(config.source_dir) if os.path.isfile(os.path.join(config.source_dir, f))]
     if not source_files:
@@ -60,12 +62,22 @@ def main():
             lang = compiler.detect_language(source_file)
         else:
             lang = config.language
-
+        
+        
+        # Analysis the code
+        if lang in ['c', 'cpp']:
+            analysis_result = analysier.uses_stl_headers(full_source_path)
+            if analysis_result:
+                logger.log_result(program_name, "N/A", "Static Analysis Error", 0, 0, f"Error: STL code found inside the code!")
+                continue
+                
+        # compile the code if needed
         if lang in ['c', 'cpp']:
             try:
                 executable_path = compiler.compile_code(full_source_path, program_name, lang)
                 if not executable_path:
                     print(f"Compilation failed for {source_file}. Skipping.")
+                    logger.log_result(program_name, "N/A", "Compilation Error", 0, 0, f"Error: compiler error")
                     continue
             except Exception as e:
                 print(f"Error during compilation of {source_file}: {e}. Skipping.")
@@ -77,7 +89,8 @@ def main():
             print(f"Unsupported language '{lang}' for {source_file}. Skipping.")
             logger.log_result(program_name, "N/A", "Unsupported Language", 0, 0, f"Language: {lang}")
             continue
-
+        
+        # running the code and log the output
         for i, (input_file, output_file) in enumerate(test_cases):
             test_case_name = os.path.basename(input_file)
             print(f"  Running Test Case {i+1}: {test_case_name}")
