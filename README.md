@@ -1,3 +1,50 @@
+### Question Format:
+
+1. Description
+2. Input Format
+3. Ouptut Format
+4. Sample Input N
+5. Sample Ouput N
+
+```
+Description:
+
+Write a program that reads two integers, a and b, from standard input and prints their sum to standard output.
+
+Input Format:
+
+The input consists of two space-separated integers, a and b, on a single line.
+
+Output Format:
+
+Print a single integer, which is the sum of a and b.
+
+Sample Input 1:
+5 3
+
+Sample Output 1:
+8
+```
+
+
+### Director Format for the DSA Evaluator
+#### Input
+
+```
+Q1
+|-- code
+    |-- <roll_no>_Q1.cpp
+|-- testcases
+    |-- input<n>.txt
+    |-- ouput<n>.txt
+```
+#### Output CSV
+```
+results
+|-- Q1.csv
+```
+
+
 
 ### Update the config according to your need:
 
